@@ -20,6 +20,8 @@ steps:
     versionSpec: '$(PYTHON_VERSION)'
     architecture: 'x64'
 
+- task: PublishBuildArtifacts@1
+
 - task: PythonScript@0
   displayName: 'Export project path'
   inputs:
