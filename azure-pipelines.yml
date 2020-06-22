@@ -20,7 +20,7 @@ steps:
     versionSpec: '$(PYTHON_VERSION)'
     architecture: 'x64'
 
-- task: PublishBuildArtifacts@1
+
 
 - task: PythonScript@0
   displayName: 'Export project path'
@@ -49,6 +49,7 @@ steps:
     python manage.py test --testrunner xmlrunner.extra.djangotestrunner.XMLTestRunner --no-input
   displayName: 'Run tests'
 
+- task: PublishBuildArtifacts@1
 #- task: PublishTestResults@2
 #  inputs:
 #    testResultsFiles: "**/TEST-*.xml"
