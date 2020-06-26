@@ -6,5 +6,6 @@ from django.http import HttpResponse
 
 def index(request):
     context = {}
+    print("some thing")
     return render(request, 'polls/index.html', context)
 
